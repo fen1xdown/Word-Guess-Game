@@ -10,12 +10,39 @@ var correctWord = words[Math.floor(Math.random() * words.length)];
 
 console.log(correctWord);
 
+var userGuesses = 10;
+var userKey = "";
+
+
 // document.getElementById("word").textContent = correctWord;
 
 var getRandomWord = function () {
     return words[Math.floor(Math.random() * words.length)];
 };
 
+for (var i = 0; i < correctWord.length; i++){
+    
+    var correctLetter = $("<div>");
+
+    correctLetter.addClass("letter");
+
+    correctLetter.attr("data-letter", correctWord[i]);
+
+    correctLetter.text(correctWord[i]);
+
+    $("#letter").append(correctLetter);
+
+    console.log(correctWord[i]);
+}
+
+if (userKey === correctWord[i]) {
+  // print selected letter in correct placement in word // innerHTML change // google innerHTML
+  // update the following: // user guesses // correct letters // win-losses // 
+  
+
+}
+
+  // use for loop instead of this to prevent wrist violins
     $(document).keyup(function(e) {
         switch (e.which) {
   
@@ -126,4 +153,12 @@ var getRandomWord = function () {
         default:
           break;
         }
+
+        //var userKey = document.getElementById(".keyup").value;
+
+
+
+
       });
+
+
